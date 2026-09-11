@@ -10,7 +10,7 @@
 
 GitHub Pages: https://r79128686.github.io/kyushu-shiori-2026/
 
-この制作フォルダでは公開ファイルを dist/ に格納。GitHubリポジトリでは同じファイルをルートに配置し、main の / (root) を公開します。ビルド・外部API・データベースは不要です。
+このリポジトリでは公開ファイルをルートに配置し、main ブランチの / (root) を GitHub Pages で公開しています。ビルド・外部API・データベースは不要です。
 
 編集対象は app.js と style.css。画像の出典は PHOTO_SOURCES.md、既存の生成画像プロンプトは IMAGE_PROMPTS.md を参照。
 
