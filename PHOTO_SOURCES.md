@@ -127,3 +127,14 @@ Official restaurant and tourism photographs. Checked: 2026-09-12.
 - Rakudayama coordinates: https://www.town.kumamoto-takamori.lg.jp/site/kanko/1890.html
 - Leaflet: https://leafletjs.com/
 - OSM tile policy: https://operations.osmfoundation.org/policies/tiles/
+
+## Kikunan hotel lobby
+- Asset: assets/hotel-kikunan.webp
+- Source: https://kikunan-ublhotel.jp/facilities/
+- Original: https://kikunan-ublhotel.jp/wp/wp-content/themes/kikunan-ublhotel/images/facilities_03@2x.jpg
+- Credit: 菊南温泉ユウベルホテル公式
+
+## Hotel-first arrival route
+- Luggage before check-in: https://kikunan-ublhotel.jp/qa/
+- Airport to hotel (35 minutes by car): https://kikunan-ublhotel.jp/access/
+- Official diagram: https://kikunan-ublhotel.jp/wp/wp-content/themes/kikunan-ublhotel/images/access_08.svg
