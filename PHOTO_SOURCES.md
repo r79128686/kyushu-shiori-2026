@@ -138,3 +138,34 @@ Official restaurant and tourism photographs. Checked: 2026-09-12.
 - Luggage before check-in: https://kikunan-ublhotel.jp/qa/
 - Airport to hotel (35 minutes by car): https://kikunan-ublhotel.jp/access/
 - Official diagram: https://kikunan-ublhotel.jp/wp/wp-content/themes/kikunan-ublhotel/images/access_08.svg
+
+## Additional real photographs (2026-09-12)
+
+Each added card uses a photograph from its venue, tourism organization or facility and links to the source. Photographs may show a different season.
+
+| Asset | Venue / source page | Original image |
+| --- | --- | --- |
+| tengai.webp | [天外天 熊本駅店](https://www.jrkumamotocity.com/floor/detail/?cd=000249) | [Photo](https://www.jrkumamotocity.com/uploads/images/resized/390x390/jrkumamotocity/000002/000002/add80af2.png) |
+| heroumi.webp | [大漁食堂 HERO海 熊本駅店](https://hero-umi.com/brands/hero-umi_kumamotoeki/) | [Photo](https://hero-umi.com/wordpress-2025/wp-content/themes/heros/assets/images/brands/hero-umi_kumamotoeki/page-header@2x.jpg) |
+| sushieki.webp | [天草HERO鮨 牛深丸 熊本駅店](https://hero-umi.com/brands/ushibukamaru_kumamotoeki/) | [Photo](https://hero-umi.com/wordpress-2025/wp-content/themes/heros/assets/images/brands/ushibukamaru_kumamotoeki/page-header@2x.jpg) |
+| houraku.webp | [蜂楽饅頭 熊本上通店](http://www.houraku.co.jp/tenpo-list/ku-ku.html) | [Photo](http://www.houraku.co.jp/photo/hyousi1.jpg) |
+| milk.webp | [ASO MILK FACTORY](https://asomilkfactory.com/restaurant/) | [Photo](https://asomilkfactory.com/app/wp-content/uploads/2025/02/lunch_img_01.webp) |
+| sanzoku.webp | [山賊旅路](https://www.aso-denku.jp/gourmet/sanzoku/) | [Photo](https://www.aso-denku.jp/wp-content/uploads/2024/05/SanzokuTakanameshi.jpg) |
+| torimiya.webp | [阿蘇とり宮](https://www.aso-denku.jp/saddlerack/とり宮/) | [Photo](https://www.aso-denku.jp/wp-content/uploads/2015/09/yjimageDA12KZCL.jpg) |
+| coffee.webp | [草千里珈琲焙煎所](https://www.kusasenricoffeeroastery.com/) | [Photo](https://images.squarespace-cdn.com/content/v1/61711114d10fbf67a2ba50ea/c94a80db-fc75-43e4-ac83-015d8d9c1dc7/DSC08641_3.jpg) |
+| miyachiku.webp | [一ツ葉ミヤチク](https://rest.miyachiku.jp/hitotsubac/) | [Photo](https://rest.miyachiku.jp/wp-content/themes/rest/img/hitotsuba/menu01.jpg) |
+| masumoto.webp | [桝元 イオンモール宮崎店](https://www.karamenya-masumoto.com/) | [Photo](https://www.karamenya-masumoto.com/karamenya-masumoto/wp-content/themes/karamenya/images/menu/karamen/karamen-ganso_sp.webp) |
+| yumekagura.webp | [おもてなし 夢かぐら](https://www.miyazaki-airport.co.jp/eat/yumekagura) | [Photo](https://www.miyazaki-airport.co.jp/contents/wp-content/uploads/2019/04/yumekagura_osusume1-600x400.jpg) |
+| watatsumi.webp | [鮨処 わたつみ](https://www.miyazaki-airport.co.jp/eat/watatsumi) | [Photo](https://www.miyazaki-airport.co.jp/contents/wp-content/uploads/2019/04/watatsumi-03-600x400.jpg) |
+| suizenji.webp | [水前寺成趣園](https://www.suizenji.or.jp/) | [Photo](https://www.suizenji.or.jp/cms/wp-content/themes/suizenji.or.jp/img/home/garden_bg_sp.webp) |
+| square.webp | [くまモンスクエア](https://kumamon-land.jp/squares/?product_id=8) | [Photo](https://kumamon-land.jp/square/img/pht_square07.jpg) |
+| camk.webp | [熊本市現代美術館](https://www.camk.jp/information/floor/) | [Photo](https://www.camk.jp/asset/images/information/floor/img-artwork2.png) |
+| ezuko.webp | [水前寺江津湖公園・上江津湖](https://www.ezuko-park.com/about_s/) | [Photo](https://www.ezuko-park.com/wp-content/themes/responcive/img/about/img03_1.jpg) |
+| asojinja.webp | [阿蘇神社](https://asojinja.or.jp/) | [Photo](https://asojinja.or.jp/wp-content/uploads/2024/09/ss012.jpg) |
+| monzen.webp | [阿蘇神社の門前町](https://asomonzen.or.jp/?p=148) | [Photo](https://asomonzen.or.jp/wp-content/uploads/2025/01/IMG_0698-768x1024.jpg) |
+| komezuka.webp | [米塚の景色](https://www.asocity-kanko.jp/spot/komeduka/) | [Photo](https://www.asocity-kanko.jp/files/uploads/2021/12/b513d6347d256bdeeef3f5f1eed04b41-1280x720.jpg) |
+| shirakawa.webp | [白川水源](https://minamiaso.info/spot/shirakawaspring/) | [Photo](https://minamiaso.info/wp/wp-content/uploads/2020/10/shirakawasuigen1-1024x576.jpg) |
+| miyazakijingu.webp | [宮﨑神宮](https://www.miyazaki-city.tourism.or.jp/spot/10004) | [Photo](https://www.miyazaki-city.tourism.or.jp/storage/tourism_attractions/10004/responsive_images/FfNR1MkJzHmUDSt1zD3ggUVDwzjl6xJufHJKnnb3__1580_1053.jpeg) |
+| horikiri.webp | [堀切峠](https://www.miyazaki-city.tourism.or.jp/spot/10006) | [Photo](https://www.miyazaki-city.tourism.or.jp/storage/tourism_attractions/10006/responsive_images/fhW5JWvzTeTS4h760Zfp4uHQPLYnh0IE54X1KdIZ__1500_1000.jpeg) |
+| heiwadai.webp | [平和台公園](https://www.miyazaki-city.tourism.or.jp/spot/10017) | [Photo](https://www.miyazaki-city.tourism.or.jp/storage/tourism_attractions/10017/responsive_images/xCyrnm7i42ZWJ5sQ0WVBjSdnECfNr2734NaTeaqn__1756_1166.jpeg) |
+| misogi.webp | [江田神社・みそぎ池](https://www.miyazaki-city.tourism.or.jp/spot/10014) | [Photo](https://www.miyazaki-city.tourism.or.jp/storage/tourism_attractions/10014/responsive_images/uMFyGtvfAdlViRiOXg4Tfu72juViQylO0IIMf5MB__1620_1080.jpeg) |

@@ -1,29 +1,28 @@
 # ふたりの九州旅
 
-2026年9月13日〜17日、熊本・阿蘇・宮崎のスマホ向け旅のしおり。
+2026年9月13〜17日、熊本・阿蘇・宮崎のスマートフォン向け旅のしおり。
 
-- 13日は空港から先に菊南温泉ユウベルホテルへ。荷物を預けて街で観光・食事、夜に同じホテルへ戻る案
-- 「旅程」：5日間の予定、ページ内の地図、出発地から到着地、乗り場の図解
-- 「エリアガイド」：熊本市内・阿蘇・宮崎を「あそぶ／たべる」で切り替え
-- 熊本の食事候補10店を写真の横スクロールで比較。13・14日の昼・夜に選択
-- 宮崎のランチ候補2店、観光スポット6か所。店舗・メニュー・Googleマップのリンク付き
-- 選択を端末に保存。「共有」で選んだ食事を含むURLを作成。別端末とはURL共有時点の内容を引き継ぐ
-- 食事の選択は候補の保存のみ。店舗・車の予約や連絡は行わない
+公開URL: https://r79128686.github.io/kyushu-shiori-2026/
 
-GitHub Pages: https://r79128686.github.io/kyushu-shiori-2026/
+- 移動カードごとに出発 A・到着 B の地図を表示。飛行機・バス・車・徒歩を色とアイコンで区別。
+- 熊本初日は空港からホテルへ行って荷物を預け、観光後に同じホテルへ戻る。
+- グルメ24候補・観光18スポット。エリアとカテゴリで絞り込み、実写真・メニュー・価格・店舗リンクで比較。
+- 13・14日の昼食と夕食は写真の横スクロールから変更でき、選択先の移動地図と共有URLに反映。
+- 飛行機の時刻・座席、なんぷう号の座席と決済額、シーガイアの部屋・食事・夕食予約を掲載。
+- 予約番号、航空券番号、個人名、個人の連絡先、認証付き乗車券URLは公開しない。
 
-制作フォルダは dist/ が公開対象。GitHubでは同じ公開ファイルをリポジトリ直下に配置し、main の / (root) を公開。静的HTML・CSS・JavaScriptでビルド不要。データベース・APIキーは不使用。
+## 情報の扱い
 
-主な編集対象：app.js（旅程と操作）、catalog.js（候補・出典・座標）、visual.css（今回の画面）、style.css（基本部品）。
-地図：Leaflet 1.9.4＋OpenStreetMap標準タイル。インターネット接続が必要。番号は訪問順、点線は施設間のつながりで道路経路ではない。特定のバス乗場位置は図解を参照。各店の詳細地図はGoogleマップ埋め込み。タイルの先読み・一括取得・オフライン保存は行わない。
+予約済みと移動・食事の提案を分けて表示。○は提案時刻。地図の点線は地点間の位置関係で、道路や飛行経路そのものではない。詳細なバス乗り場はページ内の目印図で案内。
 
-価格・交通情報は2026年9月12日確認。価格不明は店頭確認または予算目安を明記。予約済みの飛行機・なんぷう号・シーガイア夕食と、未予約の案を区別。運行変更・臨時休業は現地・公式案内を優先。
+価格は確認できた公式・店舗掲載額を優先し、参考掲載額や予算目安にはその旨を表示。菊南温泉の宿泊条件は共有情報に基づき、メール未確認の部屋・金額は断定しない。
 
-個人の無料・広告なし旅行記事。くまモンは公式FAQの個人HP記事掲載例に沿って、原本を変えず導入イラストとして使用。©2010熊本県くまモン。公式サイトや店の推薦を表すものではありません。
-写真・座標の出典は PHOTO_SOURCES.md、地図ライブラリのライセンスは leaflet-LICENSE.txt。既存イラストは IMAGE_PROMPTS.md。
+## Source layout
 
-予約番号、乗車券URL、氏名、個人の連絡先は公開ファイルに含めていません。
+Sites source uses dist/ as its public directory. GitHub Pages places those files at the repository root. Static HTML/CSS/JavaScript; no build dependencies. Leaflet is vendored locally and map tiles are from OpenStreetMap with attribution.
 
-検証：JavaScript構文、5日・6ガイド画面の生成、画像参照、食事選択の有効／無効、共有URLの保存と復元、地図座標、HTMLの構造。WebMCPの食事選択は対応ブラウザからの実呼出・画面反映・無効入力の拒否を検証済み。
+Main files: app.js (UI and choices), itinerary.js (itinerary and booking notes), movement.js (maps), catalog.js and extra-catalog.js (recommendations), movement.css (transport and discovery styles).
 
-Leafletのライセンスは同ライブラリのみに適用。写真・イラストの権利は各権利者に帰属します。
+## Verification
+
+Checked all five days and six regional views, every eligible meal selection, hotel-first ordering, map endpoints, reservation times/seats, lunch/dinner-specific menus, local photos and public-data exclusions. Photo sources: [PHOTO_SOURCES.md](PHOTO_SOURCES.md).
