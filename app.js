@@ -122,7 +122,7 @@ stop('午後','手ぶらで熊本さんぽ',box('<button class="visit-teaser" da
 '</ol>'+refs([['ホテルの荷物預かり',sourceURLs.hotel],['空港から約35分','https://kikunan-ublhotel.jp/access/'],['桜町の構内図',sourceURLs.terminal],['19:55便の経路','https://www.kumamotodentetsu.co.jp/bus/select/cgi/table/program/kdroutep.cgi?bn=791&bs=6']],'<p>○は提案時刻。到着日の往路はタクシー案、夜はバスでホテルに戻る案。車・食事は未予約。バスを使う場合は当日の便に合わせて時刻を調整。</p><p>荷物預かりはホテル公式FAQで確認済み。ホテルへ戻る予定時刻は、荷物を預ける際にフロントへ伝える。</p>');
 dayContent[14]=()=>'<ol class="trip-list">'+stop('○ 08:00','車で阿蘇へ',box(pad('<div class="drive-card">'+icon('car')+'<b>菊南温泉 → '+escapeHTML(picked('l14').name)+'</b></div><p class="one-note">'+(picked('l14').id==='rakudayama'?'高森まで足を延ばすドライブ案。':picked('l14').id==='kusasenri'?'草千里へ直接向かい、散策の前後にランチ。':'内牧であか牛丼を食べてから、草千里へ。')+'</p>')))+mealStop('l14',picked('l14').id==='imakin'?'○ 10:00':'○ 11:30')+stop('○ 13:00','草千里ヶ浜',box('<img class="scene-photo" src="assets/kusasenri-real.webp" alt="阿蘇・草千里ヶ浜の草原と池" width="960" height="640" loading="lazy">'+pad('<div class="scene-copy"><b>草原と池、阿蘇の大きな景色。</b><span>散策 1〜2時間の案</span></div><div class="food-links">'+ext('Googleマップ',map('草千里ヶ浜'))+ext('公式案内','https://www.asocity-kanko.jp/spot/kusasenri/')+'</div><p class="source-credit">写真：阿蘇市観光協会</p>')),'sight')+stop('○ 14:30','景色を見ながらコーヒー',box(pad('<b>草千里珈琲焙煎所</b><p class="one-note">ニュー草千里1Fでひと休み。</p>'+ext('Googleマップ',map('草千里珈琲焙煎所')))),'sight')+stop('○ 15:30','熊本へ戻る',box(pad('<div class="drive-card">'+icon('car')+'<b>草千里 → '+escapeHTML(picked('d14').id==='kikusen'?'ホテル':picked('d14').name)+'</b></div><p class="one-note">夕食と車の返却に余裕を持って出発。</p>')))+mealStop('d14','○ 18:30')+(picked('d14').id==='kikusen'?'':stop('食後','ホテルへ',box(pad('<b>'+escapeHTML(picked('d14').name)+' → 菊南温泉</b><p class="one-note">車返却後はタクシーの案。</p>')),'stay'))+'</ol>'+refs([['草千里の営業案内','https://www.newkusasenri.com/info/?mode=dsp&no=44']],'<p>この日の時刻は案。食事・車は未予約。草千里は9/6公式案内で通常営業、火口周辺は規制中。食事を変えたときは、各店の営業時間を確認。</p>');
 function selectedDay(){const m=location.hash.match(/day(1[3-7])/);return m?Number(m[1]):13}
-function viewState(){const m=location.hash.match(/^#explore\/(city|aso|miyazaki)(?:\/(play|eat))?/);return m?{view:'explore',area:m[1],kind:m[2]||'play'}:{view:'plan'}}
+function viewState(){if(location.hash==='#packing')return {view:'packing'};const m=location.hash.match(/^#explore\/(city|aso|miyazaki)(?:\/(play|eat))?/);return m?{view:'explore',area:m[1],kind:m[2]||'play'}:{view:'plan'}}
 let discoveryFilter='all';
 function menuFor(f,slot){if(!slot)return f;return {...f,menus:(slot[0]==='l'?f.lunchMenus:f.dinnerMenus)||f.menus,menu:(slot[0]==='l'?f.lunchMenuURL:null)||f.menu}}
 function foodGroup(f){return /寿司|海鮮/.test(f.genre)?'fish':/あか牛|宮崎牛|馬|とんかつ|鶏/.test(f.genre)?'meat':/麺|ラーメン|うどん/.test(f.genre)?'noodle':/カフェ|甘い|食べ歩き/.test(f.genre)?'cafe':'local'}
@@ -134,9 +134,10 @@ function render(){
  releaseMovementMaps();
  if(leafletMap){leafletMap.remove();leafletMap=null;mapLayers=null}
  const s=viewState(),n=selectedDay();if(s.view==='plan')lastPlanDay=n;document.body.dataset.view=s.view;
- document.querySelector('.date-nav').hidden=s.view==='explore';document.querySelector('.trip-cover').hidden=s.view==='explore';
+ document.querySelector('.date-nav').hidden=s.view!=='plan';document.querySelector('.trip-cover').hidden=s.view!=='plan';
  document.querySelectorAll('[data-main-view]').forEach(b=>b.setAttribute('aria-current',b.dataset.mainView===s.view?'page':'false'));
  document.getElementById('date-tabs').innerHTML=dates.map(x=>'<button class="date-tab" role="tab" id="tab-'+x.n+'" aria-controls="day-panel" aria-selected="'+(x.n===n)+'" tabindex="'+(x.n===n?0:-1)+'" data-day="'+x.n+'"><strong>'+x.n+'<small>'+x.week+'</small></strong><span>'+x.area+'</span></button>').join('');
+ if(s.view==='packing'){document.getElementById('journey').innerHTML=packingHTML();bindPacking();return}
  if(s.view==='explore'){document.getElementById('journey').innerHTML=exploreHTML(s);bindRails();return}
  const d=dates.find(x=>x.n===n);let content=dayContent[n]();if(n>=15)content=content.replace(/^<div class="route-map">[\s\S]*?<\/div><\/div><\/div>/,'');
  document.getElementById('journey').innerHTML='<div id="day-panel" role="tabpanel" aria-labelledby="tab-'+n+'"><div class="day-heading"><h2>'+d.title+'</h2><span class="day-number">DAY 0'+(n-12)+'</span></div>'+'<div class="transport-legend">'+['plane','bus','car','walk'].map(k=>'<span style="color:'+transportStyles[k].color+'">'+icon(k)+transportStyles[k].label+'</span>').join('')+'</div>'+'<div class="schedule-heading"><h3>この日の予定</h3><span>○ は予定時刻</span></div>'+content+'</div>'+(n<17?'<button class="next-day" data-day="'+(n+1)+'">翌日 '+(n+1)+'日へ →</button>':'');initMovementMaps();
@@ -148,7 +149,7 @@ function showInlineMap(button,query){const parent=button.closest('.dish-details,
 document.addEventListener('click',e=>{
  const b=e.target.closest('button');if(!b)return;const d=b.dataset;
  if(d.day){activeLeg=0;location.hash='day'+d.day}
- else if(d.mainView){location.hash=d.mainView==='plan'?'day'+lastPlanDay:'explore/city/play'}
+ else if(d.mainView){location.hash=d.mainView==='plan'?'day'+lastPlanDay:d.mainView==='packing'?'packing':'explore/city/play'}
  else if(d.area){discoveryFilter='all';location.hash='explore/'+d.area+'/'+(viewState().kind||'play')}
  else if(d.kind){discoveryFilter='all';location.hash='explore/'+viewState().area+'/'+d.kind}
  else if(d.filter){discoveryFilter=d.filter;render()}
